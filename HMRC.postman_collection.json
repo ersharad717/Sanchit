@@ -1,0 +1,888 @@
+{
+	"info": {
+		"_postman_id": "0929c722-fa6e-4bc7-9b7f-122b459da413",
+		"name": "HMRC",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "HMRC Hello World",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"  \r",
+							"pm.sendRequest(\"https://test-api.service.hmrc.gov.uk/hello/world\", function (err,response) {console.log(response.json());\r",
+							"    });\r",
+							"\r",
+							"var METHOD = pm.request.method;\r",
+							"console.log(METHOD);\r",
+							"var MethodValidate = METHOD == \"GET\"\r",
+							"console.log(MethodValidate);\r",
+							"\r",
+							"\r",
+							"// pm.test(\"Response content-type is present\", function(){\r",
+							"//         pm.response.to.have.header(\"Content-Type\");\r",
+							"// });\r",
+							"\r",
+							"// pm.test(\"Status code is 200\", function () {\r",
+							"//     pm.response.to.have.status(200);\r",
+							"// });\r",
+							"\r",
+							"// pm.test(\"Header Accept is present\", function() {\r",
+							"//       pm.request.to.have.header(\"Accept\");\r",
+							"// });\r",
+							"\r",
+							"// pm.test(\"Header content-type is present\", function() {\r",
+							"//       pm.request.to.have.header(\"Content-Type\");\r",
+							"// });\r",
+							"\r",
+							"// tests[\"Response time is less than 1000000ms\"]=responseTime<1000000;\r",
+							"\r",
+							"\r",
+							"// var time = responseTime;\r",
+							"\r",
+							"// console.log(time);\r",
+							"\r",
+							"// tests[\"Response time is less than 1000000ms\"]= time<1000000;\r",
+							"\r",
+							"// var XXX= JSON.parse(responseBody);\r",
+							"// console.log(XXX);\r",
+							"\r",
+							"// var YYY = XXX.message;\r",
+							"\r",
+							"// console.log(YYY);\r",
+							"\r",
+							"\r",
+							"// tests[\"Body matches message\"] = pm.expect(YYY).to.eql(\"Hello World\")\r",
+							"\r",
+							"// tests[\"Body matches loanAmount\"] = responseBody.has(\"Hello World\");\r",
+							"\r",
+							"// var ttt = pm.info.requestName;\r",
+							"// console.log(ttt);\r",
+							"\r",
+							"// var UUU = pm.info.iterationCount\r",
+							"// console.log(UUU);\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"strictSSL": false
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/vnd.hmrc.1.0+json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://test-api.service.hmrc.gov.uk/hello/world",
+					"protocol": "https",
+					"host": [
+						"test-api",
+						"service",
+						"hmrc",
+						"gov",
+						"uk"
+					],
+					"path": [
+						"hello",
+						"world"
+					]
+				},
+				"description": "HMRC"
+			},
+			"response": []
+		},
+		{
+			"name": "HMRC Hello World_Practice work",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// pm.sendRequest(\"https://test-api.service.hmrc.gov.uk/hello/world\", function(err,response){\r",
+							"//     (response.json());\r",
+							"// });\r",
+							"\r",
+							"// var Test1= pm.request.method;\r",
+							"// console.log(Test1);\r",
+							"// var Test2 = Test1 == \"GET\";\r",
+							"// console.log(Test2)\r",
+							"\r",
+							"// pm.test(\"Response body has content-type\", function(){\r",
+							"//     pm.response.to.have.header(\"Content-Type\")\r",
+							"// })\r",
+							"\r",
+							"// pm.test(\"response code matches status code\", function(){\r",
+							"//     pm.response.to.have.status(200);\r",
+							"// })\r",
+							"\r",
+							"// tests[\"response code matches\"]= responseCode.code == 200;\r",
+							"// tests[\"response time matches\"]= responseTime<1000;\r",
+							"\r",
+							"var Test3= JSON.parse(responseBody);\r",
+							"//console.log(Test3);\r",
+							"\r",
+							"var Test4 = Test3.message;\r",
+							"console.log(Test4)\r",
+							"\r",
+							"tests[\"body matches response\"]= pm.expect(Test4).to.eql(\"Hello World\")\r",
+							"var test4 = pm.info.requestName;\r",
+							"console.log(test4);\r",
+							"var test5= pm.info.iterationCount;\r",
+							"console.log(test5)\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"strictSSL": false
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/vnd.hmrc.1.0+json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://test-api.service.hmrc.gov.uk/hello/world",
+					"protocol": "https",
+					"host": [
+						"test-api",
+						"service",
+						"hmrc",
+						"gov",
+						"uk"
+					],
+					"path": [
+						"hello",
+						"world"
+					]
+				},
+				"description": "HMRC"
+			},
+			"response": []
+		},
+		{
+			"name": "https://reqres.in/api/users",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//var XYZ= pm.response.json();\r",
+							"//console.log(XYZ[0].id)\r",
+							"\r",
+							"var myTest = pm.request.body.raw;\r",
+							"//console.log(myTest);\r",
+							"var Test1 = JSON.parse(myTest);\r",
+							"//console.log(Test1);\r",
+							"var Test2 = Test1[0].id;\r",
+							"console.log(Test2);\r",
+							"pm.collectionVariables.set(\"Test1\", Test1);\r",
+							"pm.collectionVariables.set(\"Test2\", Test2);\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"// // var XXX= JSON.parse(responseBody);\r",
+							"// // var YYY = XXX[0][\"id\"];\r",
+							"// // console.log(YYY);\r",
+							"// // tests[\"Body matches message\"] = pm.expect(YYY).to.eql(3643)\r",
+							"\r",
+							"// var XYZ= JSON.parse(responseBody);\r",
+							"\r",
+							"// //tests[\"Body matches message\"] = pm.expect(YYY).to.eql(3643)\r",
+							"\r",
+							"// var text = \"\";\r",
+							"// var i;\r",
+							"// var id;\r",
+							"// var YYY;\r",
+							"// for (i =0; i < XYZ.length; i++) {\r",
+							"//     YYY = XYZ[i][\"id\"];\r",
+							"    \r",
+							"//         // text += \"The number is \" + YYY + \"<br>\";\r",
+							"//     if (YYY == 3697) \r",
+							"//     break;  \r",
+							"//     console.log(YYY);        \r",
+							"// }\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n  { \"id\": 3643, \"summary\": \"Wash car\" },\r\n  { \"id\": 3697, \"summary\": \"Visit gym\" },\r\n  { \"id\": 3792, \"summary\": \"Get milk\" }\r\n]\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://reqres.in/api/users",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ReqRes_Practice_Work",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// pm.sendRequest(\"https://reqres.in/api/users\", function(err,response){\r",
+							"//     (response.json());\r",
+							"// })\r",
+							"\r",
+							"//var XYZ1 = pm.request.body.raw;\r",
+							"//console.log(XYZ1);\r",
+							"//console.log(XYZ3)\r",
+							"\r",
+							"var XYZ2 =JSON.parse(responseBody);\r",
+							"var i;\r",
+							"var XYZ3;\r",
+							"for(i=0; i< XYZ2.length; i++){\r",
+							"   XYZ3= XYZ2[i].id;\r",
+							"console.log(XYZ3);\r",
+							"    if(XYZ3 == 3697)\r",
+							"\r",
+							"    break;\r",
+							"\r",
+							"}\r",
+							"\r",
+							"\r",
+							"\r",
+							"// pm.collectionVariables.set(\"Moon\",XYZ3)\r",
+							"\r",
+							"// tests[\"response body matches\"]= pm.expect(XYZ3).to.eql(3697);\r",
+							"// postman.setEnvironmentVariable(\"Moon1\",XYZ3);\r",
+							"\r",
+							"// tests[\"Body matches status\"]= responseCode.code == 201;\r",
+							"// var XYZ4= pm.info.requestName;\r",
+							"// console.log(XYZ4);\r",
+							"// var XYZ5 = pm.info.iterationCount;\r",
+							"// console.log(XYZ5)\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"// var i;\r",
+							"// var id;\r",
+							"// var YYY;\r",
+							"// for (i =0; i < Result.length; i++) {\r",
+							"//     YYY = Result[i][\"id\"];\r",
+							"//      console.log(YYY); \r",
+							"//         // text += \"The number is \" + YYY + \"<br>\";\r",
+							"      \r",
+							"//     if (YYY == 3697) \r",
+							"//     break;      \r",
+							"// }\r",
+							"\r",
+							"// var TTT002 = pm.info.requestName;\r",
+							"// //console.log(TTT002);\r",
+							"// var TTT003 = pm.info.iterationCount;\r",
+							"// //console.log(TTT003)\\\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n  { \"id\": 3643, \"summary\": \"Wash car\" },\r\n  { \"id\": 3697, \"summary\": \"Visit gym\" },\r\n  { \"id\": 3792, \"summary\": \"Get milk\" }\r\n]\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://reqres.in/api/users",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://www.w3schools.com/xml/tempconvert.asmx",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.sendRequest(\"https://www.w3schools.com/xml/tempconvert.asmx\", function (err,responseBody){console.log(responseBody);",
+							"    ",
+							"});",
+							"",
+							"var xyz = xml2Json(responseBody);",
+							"",
+							"var YYY = xyz [\"soap:Envelope\"][\"soap:Body\"][\"FahrenheitToCelsiusResponse\"][\"FahrenheitToCelsiusResult\"]",
+							"",
+							"tests[\"Body matches Result\"] = pm.expect(YYY).to.eql(\"37.7777777777778\")",
+							"console.log(YYY)",
+							"",
+							"tests[\"Body matches response status code\"]= responseCode.code===200;",
+							"tests[\"Body matches response time\"]= responseTime<20000;",
+							"pm.test(\"Request body have header is Content-Type\"), function(){",
+							"    pm.request.to.have.header(\"Content-Type\")",
+							"};",
+							"pm.test(\"Response body have header is Content-Type\"), function(){",
+							"    pm.response.to.have.header(\"Content-Type\")",
+							"};",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "SOAPAction",
+						"value": "\"https://www.w3schools.com/xml/FahrenheitToCelsius\"",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "text/xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\r\n  <soap:Body>\r\n   <FahrenheitToCelsius xmlns=\"https://www.w3schools.com/xml/\">\r\n     <Fahrenheit>100</Fahrenheit>\r\n   </FahrenheitToCelsius>\r\n  </soap:Body>\r\n</soap:Envelope>"
+				},
+				"url": {
+					"raw": "https://www.w3schools.com/xml/tempconvert.asmx",
+					"protocol": "https",
+					"host": [
+						"www",
+						"w3schools",
+						"com"
+					],
+					"path": [
+						"xml",
+						"tempconvert.asmx"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "W3School_Practice",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.sendRequest(\"https://www.w3schools.com/xml/tempconvert.asmx\", function(err,response){console.log(responseBody);",
+							"});",
+							"",
+							"var Test01= xml2Json(responseBody);",
+							"//console.log(Test01);",
+							"var Test02 = Test01[\"soap:Envelope\"][\"soap:Body\"][\"FahrenheitToCelsiusResponse\"][\"FahrenheitToCelsiusResult\"]",
+							"//console.log(Test02);",
+							"tests[\"Body Matches result\"]=pm.expect(Test02).to.eql(\"37.7777777777778\");",
+							"pm.test(\"Content type is having header\",function(){",
+							"    pm.response.to.have.header(\"Content-Type\");",
+							"})",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "SOAPAction",
+						"value": "\"https://www.w3schools.com/xml/FahrenheitToCelsius\"",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "text/xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\r\n  <soap:Body>\r\n   <FahrenheitToCelsius xmlns=\"https://www.w3schools.com/xml/\">\r\n     <Fahrenheit>100</Fahrenheit>\r\n   </FahrenheitToCelsius>\r\n  </soap:Body>\r\n</soap:Envelope>"
+				},
+				"url": {
+					"raw": "https://www.w3schools.com/xml/tempconvert.asmx",
+					"protocol": "https",
+					"host": [
+						"www",
+						"w3schools",
+						"com"
+					],
+					"path": [
+						"xml",
+						"tempconvert.asmx"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://reqres.in/api/users Copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var Test1 = pm.response.json();;\r",
+							"// console.log(Test1);\r",
+							"var Test2 = Test1[0].summary;\r",
+							"//console.log(Test2);\r",
+							"var i;\r",
+							"for(i =0; i < Test2.length;i++){\r",
+							"    //var count = (Test2.match(/a/g));\r",
+							"    var count = (Test2.match(/a/g)).length;\r",
+							"    console.log(count)   \r",
+							"}\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n   {\"summary\": \"Wash car\"}\r\n]\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://reqres.in/api/users",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Match Argument",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var test01= pm.response.json();\r",
+							"//console.log(test01);\r",
+							"var test02\r",
+							"var test03\r",
+							"//console.log(test02);\r",
+							"var i;\r",
+							"for(i=0;i<test01.length;i++){\r",
+							"    test02=test01[i].summary;\r",
+							"    test03= test02.match(/e/gi);\r",
+							"console.log(test03)\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n   {\"summary\": \"The poem of elephant and monkEy\"},\r\n    {\"summary\": \"The poEm of elephant and monkEy\"},\r\n     {\"summary\": \"The poem of ElEphant and monkEy\"}\r\n]\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://reqres.in/api/users",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://reqres.in/api/users-Envn Variables",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var ABC= JSON.parse(responseBody);\r",
+							"//console.log(ABC);\r",
+							"var XYZ = ABC[0].id;\r",
+							"//console.log(XYZ);\r",
+							"\r",
+							"pm.collectionVariables.set(\"ABC\", ABC);\r",
+							"\r",
+							"var DemoTest33 = pm.collectionVariables.get(\"Test2\");\r",
+							"var DemoTest31 = pm.collectionVariables.get(\"Test1\");\r",
+							"var DemoTest32 = pm.collectionVariables.get(\"ABC\");\r",
+							"\r",
+							"// console.log(DemoTest31);\r",
+							"// console.log(DemoTest32);\r",
+							"//console.log(DemoTest33);\r",
+							"\r",
+							"// var Result = Boolean(DemoTest31 == DemoTest32);\r",
+							"// console.log(Result);\r",
+							"\r",
+							"var Result1 = XYZ == DemoTest33;\r",
+							"//console.log(Result1);\r",
+							"\r",
+							"var RandomNumber= Math.floor(Math.random() * 100);\r",
+							"console.log(RandomNumber);\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"//var Test7 = pm.collectionVariables.get(\"myTest\");",
+							"//console.log(Test7)"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n  { \"id\": 3643, \"summary\": \"Wash car\" },\r\n  { \"id\": 3697, \"summary\": \"Visit gym\" }, \r\n  { \"id\": 3792, \"summary\": \"Get milk\" }\r\n\r\n]\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://reqres.in/api/users",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://www.w3schools.com/xml/tempconvert.asmx",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.sendRequest(\"https://www.w3schools.com/xml/tempconvert.asmx\", function (err,responseBody){console.log(responseBody);",
+							"    ",
+							"});",
+							"",
+							"var xyz = xml2Json(responseBody);",
+							"console.log(xyz);",
+							"",
+							"var YYY = xyz [\"soap:Envelope\"][\"soap:Body\"][\"FahrenheitToCelsiusResponse\"][\"FahrenheitToCelsiusResult\"]",
+							"console.log(YYY)",
+							"tests[\"Body matches Result\"] = pm.expect(YYY).to.eql(\"37.7777777777778\")",
+							"",
+							"",
+							"tests[\"Body matches response status code\"]= responseCode.code===200;",
+							"tests[\"Body matches response time\"]= responseTime<20000;",
+							"pm.test(\"Request body have header is Content-Type\"), function(){",
+							"    pm.request.to.have.header(\"Content-Type\")",
+							"};",
+							"pm.test(\"Response body have header is Content-Type\"), function(){",
+							"    pm.response.to.have.header(\"Content-Type\")",
+							"};",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "SOAPAction",
+						"value": "\"https://www.w3schools.com/xml/FahrenheitToCelsius\"",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "text/xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\r\n  <soap:Body>\r\n   <FahrenheitToCelsius xmlns=\"https://www.w3schools.com/xml/\">\r\n     <Fahrenheit>100</Fahrenheit>\r\n   </FahrenheitToCelsius>\r\n  </soap:Body>\r\n</soap:Envelope>"
+				},
+				"url": {
+					"raw": "https://www.w3schools.com/xml/tempconvert.asmx",
+					"protocol": "https",
+					"host": [
+						"www",
+						"w3schools",
+						"com"
+					],
+					"path": [
+						"xml",
+						"tempconvert.asmx"
+					]
+				},
+				"description": "XML"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "Test1",
+			"value": [
+				{
+					"id": 3643,
+					"summary": "Wash car"
+				},
+				{
+					"id": 3697,
+					"summary": "Visit gym"
+				},
+				{
+					"id": 3792,
+					"summary": "sharad"
+				}
+			]
+		},
+		{
+			"key": "Test2",
+			"value": 3643
+		},
+		{
+			"key": "ABC",
+			"value": ""
+		}
+	]
+}
